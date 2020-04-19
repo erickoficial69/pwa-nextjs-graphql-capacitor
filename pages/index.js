@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react'
 import Head from 'next/head'
 
 import {Navbar} from '../components/navbar'
-import Block1 from '../components/block1-home'
-import Block2 from '../components/block2-home'
-import Block3 from '../components/block3-home'
+import Block1 from '../components/home/block1-home'
+import Block2 from '../components/home/block2-home'
+import Block3 from '../components/home/block3-home'
+import {Footer} from '../components/footer'
 
 function Home() {
   const [title, setTitle] = useState('')
@@ -25,6 +26,7 @@ function Home() {
       <Block2/>
 
       <Block3/>
+      <Footer/>
       </main>
   </>
 

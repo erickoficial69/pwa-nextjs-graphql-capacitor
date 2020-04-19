@@ -93,10 +93,228 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/block1-home.js":
-/*!***********************************!*\
-  !*** ./components/block1-home.js ***!
-  \***********************************/
+/***/ "./components/footer.js":
+/*!******************************!*\
+  !*** ./components/footer.js ***!
+  \******************************/
+/*! exports provided: Footer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Footer", function() { return Footer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/media/dwa/archivos/Developer-projects/dwa/components/footer.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function Footer() {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("footer", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 3
+    },
+    __self: this
+  }, __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, "About"), __jsx("article", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, "Diaz web app"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, "Plataforma dedicada al desarrollo de software, para gestionar e impulsar todo tipo de emprendimiento, negocios y empresas a travez del desarrollo t\xE9cnologico."), __jsx("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, "cont\xE1cto"), __jsx("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, __jsx("button", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, "facebook")), __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, __jsx("button", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, "instagram")), __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, __jsx("button", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, "gmail")), __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, __jsx("button", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, "twitter")))), __jsx("article", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, __jsx("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, "erick diaz"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, "Emprendedor, desarrollador de software y administrador de sistemas. Fundador y representante de la plataforma ", __jsx("b", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
+  }, "Diaz web app")), __jsx("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }, "cont\xE1cto"), __jsx("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  }, __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: this
+  }, __jsx("button", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }, "facebook")), __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }, __jsx("button", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: this
+  }, "instagram")), __jsx("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: this
+  }, __jsx("button", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: this
+  }, "gmail")))))), __jsx("style", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: this
+  }, `
+                    footer{
+                        background:#2d2d2d;
+                        grid-column: 1 / span 16;
+                    }
+                    footer > span{
+                        grid-column: 2 / span 14;
+                        display:flex;
+                        flex-flow:row wrap;
+                        justify-content:space-between;
+                    }
+                    footer > span h2{
+                        width:100%;
+                        color:lightgrey;
+                        text-align:center;
+                    }
+                    footer > span article{
+                        width:48%;
+                        color:lightgrey;
+                    }
+                    `));
+}
+
+
+
+/***/ }),
+
+/***/ "./components/home/block1-home.js":
+/*!****************************************!*\
+  !*** ./components/home/block1-home.js ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -104,16 +322,63 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/media/dwa/archivos/Developer-projects/dwa/components/home/block1-home.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function Block1() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
-    className: "paralax"
-  }, __jsx("article", null, __jsx("h1", null, "Desarrollo de sotfware"), __jsx("p", null, "Desarrollamos sitios web, aplicaciones, para android / IOS y otros tipos de sofware adaptados a la necesidad del cliente."), __jsx("p", null, "Extiende tu negocio y llega a m\xE1s clientes en cualquier parte del mundo, en cualquier dispositivo y en cualquier conexi\xF3n."), __jsx("p", null, "Ofrecemos consultor\xEDa tecnol\xF3gica, necesaria previo al desarrollo de cualquier proyecto.")), __jsx("img", {
+    className: "paralax",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, __jsx("article", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, "Desarrollo de sotfware"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, "Desarrollamos sitios web, aplicaciones, para android / IOS y otros tipos de sofware adaptados a la necesidad del cliente."), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, "Extiende tu negocio y llega a m\xE1s clientes en cualquier parte del mundo, en cualquier dispositivo y en cualquier conexi\xF3n."), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, "Ofrecemos consultor\xEDa tecnol\xF3gica, necesaria previo al desarrollo de cualquier proyecto.")), __jsx("img", {
     src: "/img/logo.png",
-    alt: "diaz web app"
-  })), __jsx("style", null, `  
+    alt: "diaz web app",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  })), __jsx("style", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, `  
               .paralax{
                 grid-column: 1 / span 16;
                 background-image:url(/img/desktop.gif);
@@ -185,10 +450,10 @@ function Block1() {
 
 /***/ }),
 
-/***/ "./components/block2-home.js":
-/*!***********************************!*\
-  !*** ./components/block2-home.js ***!
-  \***********************************/
+/***/ "./components/home/block2-home.js":
+/*!****************************************!*\
+  !*** ./components/home/block2-home.js ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -196,34 +461,133 @@ function Block1() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/media/dwa/archivos/Developer-projects/dwa/components/home/block2-home.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function Block2() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("ul", {
-    className: "block2"
-  }, __jsx("article", null, __jsx("h2", null, "Web apps"), __jsx("img", {
+    className: "block2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, __jsx("article", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, "Web apps"), __jsx("img", {
     style: {
       width: '90%',
       maxWidth: '100vmin'
     },
     src: "/img/webResponsive.gif",
-    alt: "frontend apps"
-  }), __jsx("br", null), __jsx("br", null), __jsx("p", null, "Desarrollamos plataformas web para particulares y comercios con tecnolog\xEDas como ", __jsx("b", null, "progressive web apps (pwa) y webasembly (wassm)"))), __jsx("article", null, __jsx("h2", null, "Movil apps"), __jsx("img", {
+    alt: "frontend apps",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, "Desarrollamos plataformas web para particulares y comercios con tecnolog\xEDas como ", __jsx("b", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, "progressive web apps (pwa) y webasembly (wassm)"))), __jsx("article", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, "Movil apps"), __jsx("img", {
     style: {
       width: '90%',
       maxWidth: '100vmin'
     },
     src: "/img/movilapp.gif",
-    alt: "devOps"
-  }), __jsx("p", null, "Desarrollamos aplicaciones moviles particulares y comercios con tecnolog\xEDa de punta y el mejor rendimiento del mercado.")), __jsx("article", null, __jsx("h2", null, "Servicios devOps"), __jsx("img", {
+    alt: "devOps",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, "Desarrollamos aplicaciones moviles particulares y comercios con tecnolog\xEDa de punta y el mejor rendimiento del mercado.")), __jsx("article", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, "Servicios devOps"), __jsx("img", {
     style: {
       width: '90%',
       maxWidth: '100vmin'
     },
     src: "/img/support.gif",
-    alt: "devOps"
-  }), __jsx("p", null, "Manten en linea, protege la base de datos, gana rendimiento, crea respaldos despliega y actualiza continuamente tu aplicaci\xF3n en nuestros cloud servers."))), __jsx("style", null, `
+    alt: "devOps",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, "Manten en linea, protege la base de datos, gana rendimiento, crea respaldos despliega y actualiza continuamente tu aplicaci\xF3n en nuestros cloud servers."))), __jsx("style", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, `
             .block2{
                 grid-column: 1 / span 16 ;
                 background-image:url(/img/codes-white.jpg);
@@ -268,10 +632,10 @@ function Block2() {
 
 /***/ }),
 
-/***/ "./components/block3-home.js":
-/*!***********************************!*\
-  !*** ./components/block3-home.js ***!
-  \***********************************/
+/***/ "./components/home/block3-home.js":
+/*!****************************************!*\
+  !*** ./components/home/block3-home.js ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -279,13 +643,85 @@ function Block2() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/media/dwa/archivos/Developer-projects/dwa/components/home/block3-home.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function Block3() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("section", {
-    className: "plusservice"
-  }, __jsx("h1", null, "Ofrecemos paquetes completos"), __jsx("article", null, __jsx("h2", null, "Social Management"), __jsx("p", null, "Equipo de Community Management para promoci\xF3n de apps y dar el mejor complemento a nuestros proyectos. Creamos en plan de comunicaci\xF3n y actuaci\xF3n en las redes sociales m\xE1s importantes.")), __jsx("article", null, __jsx("h2", null, "SEO/SEM"), __jsx("p", null, "Elaboramos estrategias SEO/SEM para obtener los mejores resultados, para aumentar la visibilidad y tr\xE1fico org\xE1nico para aparecer en las mejores posiciones en los motores de b\xFAsquedas.")), __jsx("article", null, __jsx("h2", null, "Promocion de apps"), __jsx("p", null, "Nuestro equipo especializado ayudar\xE1 en el proceso promoci\xF3n optimizando tu app m\xF3vil para conseguir aparecer en los primeros resultados de b\xFAsqueda en los Market Places y lograr descargas."))), __jsx("style", null, `
+    className: "plusservice",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, "Ofrecemos paquetes completos"), __jsx("article", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, "Social Management"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, "Equipo de Community Management para promoci\xF3n de apps y dar el mejor complemento a nuestros proyectos. Creamos en plan de comunicaci\xF3n y actuaci\xF3n en las redes sociales m\xE1s importantes.")), __jsx("article", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, "SEO/SEM"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, "Elaboramos estrategias SEO/SEM para obtener los mejores resultados, para aumentar la visibilidad y tr\xE1fico org\xE1nico para aparecer en las mejores posiciones en los motores de b\xFAsquedas.")), __jsx("article", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, "Promocion de apps"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, "Nuestro equipo especializado ayudar\xE1 en el proceso promoci\xF3n optimizando tu app m\xF3vil para conseguir aparecer en los primeros resultados de b\xFAsqueda en los Market Places y lograr descargas."))), __jsx("style", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, `
         .plusservice{
           grid-column: 2 / span 14;
           display:grid;
@@ -343,6 +779,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_DeveloperMode__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_DeveloperMode__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _material_ui_icons_Web__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/Web */ "@material-ui/icons/Web");
 /* harmony import */ var _material_ui_icons_Web__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Web__WEBPACK_IMPORTED_MODULE_5__);
+var _jsxFileName = "/media/dwa/archivos/Developer-projects/dwa/components/navbar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -373,59 +810,221 @@ function Navbar(props) {
     window.addEventListener('resize', () => {
       setWidth(window.innerWidth);
     });
+    window.removeEventListener('resize', () => {
+      setWidth(window.innerWidth);
+    });
   });
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     setStatus(navStatus);
-  }, []);
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, null, __jsx("link", {
+  });
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, __jsx("link", {
     rel: "manifest",
-    href: "/manifest.json"
+    href: "/manifest.json",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
   }), __jsx("link", {
     rel: "stylesheet",
-    href: "/cssreset/reset.css"
+    href: "/cssreset/reset.css",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
   }), __jsx("meta", {
     name: "viewport",
-    content: "width=device-width,minimum-scale=1,initial-scale=1 user-scalable=no"
-  })), __jsx("header", null, __jsx("span", null, width < 721 ? null : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/"
-  }, __jsx("a", {
-    onClick: () => setShow(true),
-    href: "/"
+    content: "width=device-width,minimum-scale=1,initial-scale=1 user-scalable=no",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  })), __jsx("header", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, width < 721 ? null : status === 'home' ? __jsx("span", {
+    style: {
+      color: 'lightgrey'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
   }, __jsx("img", {
     height: "25vh",
     style: {
       marginRight: '4px'
     },
     src: "/img/logo.png",
-    alt: "dwa"
-  }), width < 721 ? '' : 'diaz web app')), __jsx("nav", null, status === 'home' ? __jsx("span", null, __jsx(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    className: "icondisabled"
-  }), width < 721 ? '' : 'home') : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/"
+    alt: "dwa",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }), " diaz web app") : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
   }, __jsx("a", {
     onClick: () => setShow(true),
-    href: "/"
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }, __jsx("img", {
+    height: "25vh",
+    style: {
+      marginRight: '4px'
+    },
+    src: "/img/logo.png",
+    alt: "dwa",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }), width < 721 ? '' : 'diaz web app')), __jsx("nav", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: this
+  }, status === 'home' ? __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: this
   }, __jsx(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    className: "iconenabled"
-  }), width < 721 ? '' : 'home')), status === 'web apps' ? __jsx("span", null, __jsx(_material_ui_icons_Web__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    className: "icondisabled"
-  }), width < 721 ? '' : 'desarrollo web') : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/webapps"
+    className: "icondisabled",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: this
+  }), width < 721 ? '' : 'home') : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: this
   }, __jsx("a", {
     onClick: () => setShow(true),
-    href: "/webapps.html"
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: this
+  }, __jsx(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    className: "iconenabled",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: this
+  }), width < 721 ? '' : 'home')), status === 'web apps' ? __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
   }, __jsx(_material_ui_icons_Web__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    className: "iconenabled"
-  }), width < 721 ? '' : 'desarrollo web')), status === 'movil apps' ? __jsx("span", null, __jsx(_material_ui_icons_DeveloperMode__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    className: "icondisabled"
-  }), width < 721 ? '' : 'desarrollo movil') : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/movilapps"
+    className: "icondisabled",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64
+    },
+    __self: this
+  }), width < 721 ? '' : 'desarrollo web') : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/webapps",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68
+    },
+    __self: this
   }, __jsx("a", {
     onClick: () => setShow(true),
-    href: "/movilapps.html"
+    href: "/webapps.html",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: this
+  }, __jsx(_material_ui_icons_Web__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    className: "iconenabled",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: this
+  }), width < 721 ? '' : 'desarrollo web')), status === 'movil apps' ? __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77
+    },
+    __self: this
   }, __jsx(_material_ui_icons_DeveloperMode__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    className: "iconenabled"
-  }), width < 721 ? '' : 'desarrollo movil'))))), __jsx("style", null, `
+    className: "icondisabled",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: this
+  }), width < 721 ? '' : 'desarrollo movil') : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/movilapps",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82
+    },
+    __self: this
+  }, __jsx("a", {
+    onClick: () => setShow(true),
+    href: "/movilapps.html",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: this
+  }, __jsx(_material_ui_icons_DeveloperMode__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    className: "iconenabled",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: this
+  }), width < 721 ? '' : 'desarrollo movil'))))), __jsx("style", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94
+    },
+    __self: this
+  }, `
                     header{
                         position:fixed;
                         ${width < 721 ? 'bottom:0;' : 'top:0;'}
@@ -489,8 +1088,19 @@ function Navbar(props) {
       justifyContent: 'center',
       alignItems: 'center',
       backgroundColor: 'rgba(0,0,0, .5)'
-    }
-  }, __jsx("h2", null, "Loading...")));
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 146
+    },
+    __self: this
+  }, __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 163
+    },
+    __self: this
+  }, "Loading...")));
 }
 
 
@@ -2213,11 +2823,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/navbar */ "./components/navbar.js");
-/* harmony import */ var _components_block1_home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/block1-home */ "./components/block1-home.js");
-/* harmony import */ var _components_block2_home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/block2-home */ "./components/block2-home.js");
-/* harmony import */ var _components_block3_home__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/block3-home */ "./components/block3-home.js");
+/* harmony import */ var _components_home_block1_home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/home/block1-home */ "./components/home/block1-home.js");
+/* harmony import */ var _components_home_block2_home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/home/block2-home */ "./components/home/block2-home.js");
+/* harmony import */ var _components_home_block3_home__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/home/block3-home */ "./components/home/block3-home.js");
+/* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/footer */ "./components/footer.js");
+var _jsxFileName = "/media/dwa/archivos/Developer-projects/dwa/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -2233,9 +2846,56 @@ function Home() {
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     setTitle('home');
   });
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, null, __jsx("title", null, title)), __jsx(_components_navbar__WEBPACK_IMPORTED_MODULE_2__["Navbar"], {
-    navStatus: title
-  }), __jsx("main", null, __jsx(_components_block1_home__WEBPACK_IMPORTED_MODULE_3__["default"], null), __jsx(_components_block2_home__WEBPACK_IMPORTED_MODULE_4__["default"], null), __jsx(_components_block3_home__WEBPACK_IMPORTED_MODULE_5__["default"], null)));
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, __jsx("title", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, title)), __jsx(_components_navbar__WEBPACK_IMPORTED_MODULE_2__["Navbar"], {
+    navStatus: title,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }), __jsx("main", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, __jsx(_components_home_block1_home__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }), __jsx(_components_home_block2_home__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }), __jsx(_components_home_block3_home__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }), __jsx(_components_footer__WEBPACK_IMPORTED_MODULE_6__["Footer"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  })));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);

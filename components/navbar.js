@@ -18,11 +18,14 @@ function Navbar(props) {
         window.addEventListener('resize', () => {
             setWidth(window.innerWidth)
         })
+        window.removeEventListener('resize', () => {
+            setWidth(window.innerWidth)
+        })
     })
 
     useEffect(() => {
         setStatus(navStatus)
-    },[])
+    })
     
     return <>
             <Head>
@@ -35,7 +38,9 @@ function Navbar(props) {
                 <span>
                     {width < 721 ?
                         null
-                    :(
+                    : status === 'home'?<span style={{color:'lightgrey'}}>
+                           <img height="25vh" style={{marginRight:'4px'}} src="/img/logo.png" alt="dwa"/> diaz web app
+                    </span>:(
                         <Link href="/">
                             <a onClick={()=>setShow(true)} href="/"><img height="25vh" style={{marginRight:'4px'}} src="/img/logo.png" alt="dwa"/>{width < 721 ? '' :'diaz web app'}</a>
                         </Link>

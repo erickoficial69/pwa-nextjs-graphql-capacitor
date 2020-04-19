@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import {Navbar} from '../components/navbar'
+import {Footer} from '../components/footer'
 import Head from 'next/head'
 import {devTools} from '../components/graphql-querys/index'
 
@@ -51,7 +52,7 @@ function WebApps() {
                } 
         </ul>
       </section>
-
+      <Footer/>
       <style>
         {
            `  
