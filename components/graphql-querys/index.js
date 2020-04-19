@@ -9,3 +9,11 @@ export const devTools = (query,estado,estado2,estado3)=>{
           estado3(data.tools[2])
         })
     }
+
+export const test = (query,setTitle)=>{
+      request(
+        'http://localhost:3100/graphql',
+          query).then(data => {
+            console.log(data.postAdded)
+          })
+      }

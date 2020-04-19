@@ -70,18 +70,18 @@ function Footer() {
                         background:#2d2d2d;
                         grid-column: 1 / span 16;
                     }
-                    footer > span{
+                    footer span{
                         grid-column: 2 / span 14;
                         display:flex;
                         flex-flow:row wrap;
                         justify-content:space-between;
                     }
-                    footer > span h2{
+                    footer span h2{
                         width:100%;
                         color:lightgrey;
                         text-align:center;
                     }
-                    footer > span article{
+                    footer span article{
                         width:48%;
                         color:lightgrey;
                     }

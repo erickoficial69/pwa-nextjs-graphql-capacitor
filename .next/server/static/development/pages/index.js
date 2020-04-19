@@ -289,18 +289,18 @@ function Footer() {
                         background:#2d2d2d;
                         grid-column: 1 / span 16;
                     }
-                    footer > span{
+                    footer span{
                         grid-column: 2 / span 14;
                         display:flex;
                         flex-flow:row wrap;
                         justify-content:space-between;
                     }
-                    footer > span h2{
+                    footer span h2{
                         width:100%;
                         color:lightgrey;
                         text-align:center;
                     }
-                    footer > span article{
+                    footer span article{
                         width:48%;
                         color:lightgrey;
                     }
@@ -2842,57 +2842,54 @@ function Home() {
   const {
     0: title,
     1: setTitle
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
-    setTitle('home');
-  });
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('home');
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 14
     },
     __self: this
   }, __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 15
     },
     __self: this
   }, title)), __jsx(_components_navbar__WEBPACK_IMPORTED_MODULE_2__["Navbar"], {
     navStatus: title,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 17
     },
     __self: this
   }), __jsx("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 18
     },
     __self: this
   }, __jsx(_components_home_block1_home__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 20
     },
     __self: this
   }), __jsx(_components_home_block2_home__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 22
     },
     __self: this
   }), __jsx(_components_home_block3_home__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 24
     },
     __self: this
   }), __jsx(_components_footer__WEBPACK_IMPORTED_MODULE_6__["Footer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 26
     },
     __self: this
   })));

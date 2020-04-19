@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Head from 'next/head'
 
 import {Navbar} from '../components/navbar'
@@ -7,16 +7,13 @@ import Block2 from '../components/home/block2-home'
 import Block3 from '../components/home/block3-home'
 import {Footer} from '../components/footer'
 
-function Home() {
-  const [title, setTitle] = useState('')
 
-  useEffect(() => {
-    setTitle('home')
-  })
+function Home() {
+  const [title, setTitle] = useState('home')
+  
   return <>
       <Head>
         <title>{title}</title>
-
       </Head>
       <Navbar navStatus={title} />
       <main >
@@ -26,6 +23,7 @@ function Home() {
       <Block2/>
 
       <Block3/>
+
       <Footer/>
       </main>
   </>
