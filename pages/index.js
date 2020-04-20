@@ -6,7 +6,9 @@ import Block1 from '../components/home/block1-home'
 import Block2 from '../components/home/block2-home'
 import Block3 from '../components/home/block3-home'
 import {Footer} from '../components/footer'
+import io from 'socket.io-client'
 
+const sockets = io('http://localhost:3100/',{forceNew: true})
 
 function Home() {
   const [title, setTitle] = useState('home')

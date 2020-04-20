@@ -2827,6 +2827,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_home_block2_home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/home/block2-home */ "./components/home/block2-home.js");
 /* harmony import */ var _components_home_block3_home__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/home/block3-home */ "./components/home/block3-home.js");
 /* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/footer */ "./components/footer.js");
+/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! socket.io-client */ "socket.io-client");
+/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(socket_io_client__WEBPACK_IMPORTED_MODULE_7__);
 var _jsxFileName = "/media/dwa/archivos/Developer-projects/dwa/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -2838,6 +2840,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+const sockets = socket_io_client__WEBPACK_IMPORTED_MODULE_7___default()('http://localhost:3100/', {
+  forceNew: true
+});
+sockets.emit('message', 'menssage');
+
 function Home() {
   const {
     0: title,
@@ -2846,50 +2853,50 @@ function Home() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 18
     },
     __self: this
   }, __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 19
     },
     __self: this
   }, title)), __jsx(_components_navbar__WEBPACK_IMPORTED_MODULE_2__["Navbar"], {
     navStatus: title,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 21
     },
     __self: this
   }), __jsx("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 22
     },
     __self: this
   }, __jsx(_components_home_block1_home__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 24
     },
     __self: this
   }), __jsx(_components_home_block2_home__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 26
     },
     __self: this
   }), __jsx(_components_home_block3_home__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 28
     },
     __self: this
   }), __jsx(_components_footer__WEBPACK_IMPORTED_MODULE_6__["Footer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 30
     },
     __self: this
   })));
@@ -3051,6 +3058,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
+
+/***/ }),
+
+/***/ "socket.io-client":
+/*!***********************************!*\
+  !*** external "socket.io-client" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("socket.io-client");
 
 /***/ }),
 

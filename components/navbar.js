@@ -30,7 +30,7 @@ function Navbar(props) {
     return <>
             <Head>
                 <link rel="manifest" href="/manifest.json" />
-                <link rel='stylesheet' href='/cssreset/reset.css' />
+                <link rel='stylesheet' href='/css/reset.css' />
                 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1 user-scalable=no" />
             </Head>
 
