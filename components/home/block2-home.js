@@ -29,11 +29,8 @@ function Block2() {
            { `
             .block2{
                 grid-column: 1 / span 16 ;
-                background-image:url(/img/codes-white.jpg);
-                background-size:cover;
-                background-attachment:fixed;
                 grid-gap:7vmin;
-                padding:0 5vmin;
+                padding: 5vmin;
                 display:grid;
                 grid-template-columns:repeat(1,1fr);
                 animation: intro1 3s cubic-bezier(0.215, 0.610, 0.355, 1);
@@ -43,14 +40,27 @@ function Block2() {
               .block2 article{
                 background:white;
                 border-radius:5px;
-                box-shadow:0px 0px 1px grey;
+                box-shadow:0px 0px 1px white;
                 padding:2vmin;
+                color:grey;
+                height:98vmin;
+                overflow:hidden;              
               }
               .block2 article h2{
                   text-align:center;
                   line-height:2;
+                  color:grey;
+              }
+              .block2 article p{
+                color:grey;
+              }
+              .block2 article b{
+                color:grey;
               }
               .block2 article img{
+                object-fit:cover;
+                width:32vmin;
+                height:39vmin;
                 margin-bottom:3vmin;
             }
             

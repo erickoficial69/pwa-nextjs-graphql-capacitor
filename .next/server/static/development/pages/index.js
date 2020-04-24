@@ -93,6 +93,178 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/chat/chat.js":
+/*!*********************************!*\
+  !*** ./components/chat/chat.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _material_ui_icons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/icons */ "@material-ui/icons");
+/* harmony import */ var _material_ui_icons__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/media/dwa/archivos/Developer-projects/dwa/components/chat/chat.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+const Chat = () => {
+  const {
+    0: user,
+    1: setUser
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({});
+  const {
+    0: openQuestion,
+    1: setOpenQuestion
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+
+  const sendMessage = e => {};
+
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_1__["Mail"], {
+    style: {
+      position: 'fixed',
+      right: '7%',
+      cursor: 'pointer',
+      borderRadius: '50%',
+      boxShadow: '0px 0px 2px white',
+      zIndex: 9,
+      bottom: '65px',
+      width: '39px',
+      height: '39px',
+      padding: '3px',
+      background: '#2d2d2d'
+    },
+    onClick: () => setOpenQuestion(openQuestion === true ? false : true),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }), __jsx("form", {
+    className: "chat",
+    onSubmit: e => sendMessage(e),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: undefined
+  }, __jsx("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: undefined
+  }, "Dudas...?"), __jsx("label", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: undefined
+  }, "Tu correo"), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: undefined
+  }, user ? user.correo : null), __jsx("input", {
+    type: "email",
+    name: "nombre",
+    onChange: e => setUser(_objectSpread({}, user, {
+      correo: e.target.value
+    })),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: undefined
+  }), __jsx("textarea", {
+    name: "message",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: undefined
+  }), __jsx("button", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: undefined
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["MenuItem"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: undefined
+  }, "send"))), __jsx("style", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: undefined
+  }, `
+                .chat{
+                    z-index:8;
+                    height:${!openQuestion ? '44px;' : '315px;'} 
+                    opacity:${!openQuestion ? '0;' : '1;'};
+                    width:${!openQuestion ? '44px;' : '220px;'}
+                    background:#2d2d2d;
+                    position:fixed;
+                    right:7%;
+                    bottom:65px;
+                    overflow:hidden;
+                    transition:all .3s cubic-bezier(0.215, 1.410, 0.355, 1);
+                    display:flex;
+                    flex-flow:column;
+                    justify-content: space-between;
+                    border-radius:3px;
+                    padding:1vmin;
+                    box-shadow: 0px 0px 2px white;
+                }
+                .chat h3{
+                    line-height:1.3;
+                    text-align:center;
+                }
+                .chat input{
+                    line-height:2;
+                    background:#2d2d2d;
+                    border:1px solid white;
+                    padding: 0 2vmin;
+                }
+                .chat button{
+                    width:45%;
+                    border:1px solid white;
+                    border-radius:3px;
+                    text-transform:uppercase;
+                }
+                .chat textarea{
+                    height:155px;
+                    resize:none;
+                    background:#2d2d2d;
+                    border:1px solid white;
+                    padding:2vmin;
+                }
+                `));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Chat);
+
+/***/ }),
+
 /***/ "./components/footer.js":
 /*!******************************!*\
   !*** ./components/footer.js ***!
@@ -134,7 +306,7 @@ function Footer() {
       lineNumber: 6
     },
     __self: this
-  }, __jsx("h3", {
+  }, __jsx("b", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
@@ -146,13 +318,14 @@ function Footer() {
       lineNumber: 9
     },
     __self: this
-  }, "Plataforma dedicada al desarrollo de software, para gestionar e impulsar todo tipo de emprendimiento, negocios y empresas a travez del desarrollo t\xE9cnologico."), __jsx("h3", {
+  }, "Plataforma dedicada al desarrollo de software, para gestionar e impulsar todo tipo de emprendimiento, negocios y empresas a travez del desarrollo t\xE9cnologico."), __jsx("b", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: this
   }, "cont\xE1cto"), __jsx("ul", {
+    className: "tecnologies",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -212,13 +385,13 @@ function Footer() {
       lineNumber: 38
     },
     __self: this
-  }, __jsx("h3", {
+  }, __jsx("b", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 39
     },
     __self: this
-  }, "erick diaz"), __jsx("p", {
+  }, "Erick D\xEDaz"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40
@@ -230,13 +403,14 @@ function Footer() {
       lineNumber: 41
     },
     __self: this
-  }, "Diaz web app")), __jsx("h3", {
+  }, "Diaz web app")), __jsx("b", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 44
     },
     __self: this
   }, "cont\xE1cto"), __jsx("ul", {
+    className: "tecnologies",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 46
@@ -286,23 +460,35 @@ function Footer() {
     __self: this
   }, `
                     footer{
-                        background:#2d2d2d;
                         grid-column: 1 / span 16;
                     }
                     footer span{
                         grid-column: 2 / span 14;
                         display:flex;
-                        flex-flow:row wrap;
+                        flex-flow:column;
                         justify-content:space-between;
                     }
                     footer span h2{
                         width:100%;
-                        color:lightgrey;
                         text-align:center;
                     }
+                    footer span article b{
+                        width:100%;
+                        text-align:center;
+                    }
+                    footer span article p{
+                        padding:2vmin;
+                    }
                     footer span article{
-                        width:48%;
-                        color:lightgrey;
+                        width:99%;
+                    }
+                    @media (min-width:512px){
+                        footer span{
+                            flex-flow:row wrap;
+                        }
+                        footer span article{
+                            width:48%;
+                        }
                     }
                     `));
 }
@@ -381,7 +567,7 @@ function Block1() {
   }, `  
               .paralax{
                 grid-column: 1 / span 16;
-                background-image:url(/img/desktop.gif);
+                background-image:url(/img/codes-white.jpg);
                 background-color:#111;
                 background-size:cover;
                 background-position:center center;
@@ -590,11 +776,8 @@ function Block2() {
   }, `
             .block2{
                 grid-column: 1 / span 16 ;
-                background-image:url(/img/codes-white.jpg);
-                background-size:cover;
-                background-attachment:fixed;
                 grid-gap:7vmin;
-                padding:0 5vmin;
+                padding: 5vmin;
                 display:grid;
                 grid-template-columns:repeat(1,1fr);
                 animation: intro1 3s cubic-bezier(0.215, 0.610, 0.355, 1);
@@ -604,14 +787,27 @@ function Block2() {
               .block2 article{
                 background:white;
                 border-radius:5px;
-                box-shadow:0px 0px 1px grey;
+                box-shadow:0px 0px 1px white;
                 padding:2vmin;
+                color:grey;
+                height:98vmin;
+                overflow:hidden;              
               }
               .block2 article h2{
                   text-align:center;
                   line-height:2;
+                  color:grey;
+              }
+              .block2 article p{
+                color:grey;
+              }
+              .block2 article b{
+                color:grey;
               }
               .block2 article img{
+                object-fit:cover;
+                width:32vmin;
+                height:39vmin;
                 margin-bottom:3vmin;
             }
             
@@ -726,6 +922,7 @@ function Block3() {
           grid-column: 2 / span 14;
           display:grid;
           grid-template-columns:repeat(1,1fr);
+          padding:3vmin 1vmin;
         }
         .plusservice h1{
           line-height:2;
@@ -733,7 +930,7 @@ function Block3() {
         .plusservice article{
           margin-botoom:2vmin;
           border-radius:5px;
-          box-shadow:0px 0px 1px grey;
+          box-shadow:0px 0px 1px white;
           padding:2vmin;
         }
         .plusservice article h2{
@@ -779,9 +976,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_DeveloperMode__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_DeveloperMode__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _material_ui_icons_Web__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/Web */ "@material-ui/icons/Web");
 /* harmony import */ var _material_ui_icons_Web__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Web__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_chat_chat__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/chat/chat */ "./components/chat/chat.js");
 var _jsxFileName = "/media/dwa/archivos/Developer-projects/dwa/components/navbar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -820,7 +1019,7 @@ function Navbar(props) {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 32
     },
     __self: this
   }, __jsx("link", {
@@ -828,15 +1027,15 @@ function Navbar(props) {
     href: "/manifest.json",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 33
     },
     __self: this
   }), __jsx("link", {
     rel: "stylesheet",
-    href: "/cssreset/reset.css",
+    href: "/css/reset.css",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 34
     },
     __self: this
   }), __jsx("meta", {
@@ -844,19 +1043,19 @@ function Navbar(props) {
     content: "width=device-width,minimum-scale=1,initial-scale=1 user-scalable=no",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
   })), __jsx("header", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 38
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 39
     },
     __self: this
   }, width < 721 ? null : status === 'home' ? __jsx("span", {
@@ -865,7 +1064,7 @@ function Navbar(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 42
     },
     __self: this
   }, __jsx("img", {
@@ -877,14 +1076,14 @@ function Navbar(props) {
     alt: "dwa",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 43
     },
     __self: this
   }), " diaz web app") : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 45
     },
     __self: this
   }, __jsx("a", {
@@ -892,7 +1091,7 @@ function Navbar(props) {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 46
     },
     __self: this
   }, __jsx("img", {
@@ -904,33 +1103,33 @@ function Navbar(props) {
     alt: "dwa",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 46
     },
     __self: this
   }), width < 721 ? '' : 'diaz web app')), __jsx("nav", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 50
     },
     __self: this
   }, status === 'home' ? __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 51
     },
     __self: this
   }, __jsx(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_3___default.a, {
     className: "icondisabled",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 52
     },
     __self: this
   }), width < 721 ? '' : 'home') : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 56
     },
     __self: this
   }, __jsx("a", {
@@ -938,34 +1137,34 @@ function Navbar(props) {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 57
     },
     __self: this
   }, __jsx(_material_ui_icons_Home__WEBPACK_IMPORTED_MODULE_3___default.a, {
     className: "iconenabled",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 58
     },
     __self: this
   }), width < 721 ? '' : 'home')), status === 'web apps' ? __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 64
     },
     __self: this
   }, __jsx(_material_ui_icons_Web__WEBPACK_IMPORTED_MODULE_5___default.a, {
     className: "icondisabled",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 65
     },
     __self: this
   }), width < 721 ? '' : 'desarrollo web') : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/webapps",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 69
     },
     __self: this
   }, __jsx("a", {
@@ -973,34 +1172,34 @@ function Navbar(props) {
     href: "/webapps.html",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 70
     },
     __self: this
   }, __jsx(_material_ui_icons_Web__WEBPACK_IMPORTED_MODULE_5___default.a, {
     className: "iconenabled",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 71
     },
     __self: this
   }), width < 721 ? '' : 'desarrollo web')), status === 'movil apps' ? __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 78
     },
     __self: this
   }, __jsx(_material_ui_icons_DeveloperMode__WEBPACK_IMPORTED_MODULE_4___default.a, {
     className: "icondisabled",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 79
     },
     __self: this
   }), width < 721 ? '' : 'desarrollo movil') : __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/movilapps",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 83
     },
     __self: this
   }, __jsx("a", {
@@ -1008,20 +1207,26 @@ function Navbar(props) {
     href: "/movilapps.html",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 84
     },
     __self: this
   }, __jsx(_material_ui_icons_DeveloperMode__WEBPACK_IMPORTED_MODULE_4___default.a, {
     className: "iconenabled",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 85
     },
     __self: this
-  }), width < 721 ? '' : 'desarrollo movil'))))), __jsx("style", {
+  }), width < 721 ? '' : 'desarrollo movil'))))), __jsx(_components_chat_chat__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 94
+    },
+    __self: this
+  }), __jsx("style", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96
     },
     __self: this
   }, `
@@ -1068,10 +1273,12 @@ function Navbar(props) {
                     }
                     .iconenabled{
                         margin-right:4px;
-                        color:lightgrey;
                     }
                     .icondisabled{
-                        color:black;
+                        color:black !important;
+                    }
+                    .icondisabled path{
+                        color:black !important;
                     }
                 `), __jsx("span", {
     style: {
@@ -1091,13 +1298,13 @@ function Navbar(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 150
     },
     __self: this
   }, __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 167
     },
     __self: this
   }, "Loading...")));
@@ -2827,8 +3034,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_home_block2_home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/home/block2-home */ "./components/home/block2-home.js");
 /* harmony import */ var _components_home_block3_home__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/home/block3-home */ "./components/home/block3-home.js");
 /* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/footer */ "./components/footer.js");
-/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! socket.io-client */ "socket.io-client");
-/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(socket_io_client__WEBPACK_IMPORTED_MODULE_7__);
 var _jsxFileName = "/media/dwa/archivos/Developer-projects/dwa/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -2840,11 +3045,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const sockets = socket_io_client__WEBPACK_IMPORTED_MODULE_7___default()('http://localhost:3100/', {
-  forceNew: true
-});
-sockets.emit('message', 'menssage');
-
 function Home() {
   const {
     0: title,
@@ -2853,50 +3053,50 @@ function Home() {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 14
     },
     __self: this
   }, __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 15
     },
     __self: this
   }, title)), __jsx(_components_navbar__WEBPACK_IMPORTED_MODULE_2__["Navbar"], {
     navStatus: title,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 17
     },
     __self: this
   }), __jsx("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 18
     },
     __self: this
   }, __jsx(_components_home_block1_home__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 20
     },
     __self: this
   }), __jsx(_components_home_block2_home__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 22
     },
     __self: this
   }), __jsx(_components_home_block3_home__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 24
     },
     __self: this
   }), __jsx(_components_footer__WEBPACK_IMPORTED_MODULE_6__["Footer"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 26
     },
     __self: this
   })));
@@ -2915,6 +3115,28 @@ function Home() {
 
 module.exports = __webpack_require__(/*! /media/dwa/archivos/Developer-projects/dwa/pages/index.js */"./pages/index.js");
 
+
+/***/ }),
+
+/***/ "@material-ui/core":
+/*!************************************!*\
+  !*** external "@material-ui/core" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core");
+
+/***/ }),
+
+/***/ "@material-ui/icons":
+/*!*************************************!*\
+  !*** external "@material-ui/icons" ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/icons");
 
 /***/ }),
 
@@ -3058,17 +3280,6 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
-
-/***/ }),
-
-/***/ "socket.io-client":
-/*!***********************************!*\
-  !*** external "socket.io-client" ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("socket.io-client");
 
 /***/ }),
 

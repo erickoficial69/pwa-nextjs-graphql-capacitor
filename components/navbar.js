@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Home from '@material-ui/icons/Home'
 import DeveloperMode from '@material-ui/icons/DeveloperMode'
 import Web from '@material-ui/icons/Web'
+import Chat from '../components/chat/chat'
 
 function Navbar(props) {
     const { navStatus } = props
@@ -90,7 +91,8 @@ function Navbar(props) {
                     </nav>
                 </span>
             </header>
-
+                <Chat />
+            
             <style>
                 {`
                     header{
@@ -136,10 +138,12 @@ function Navbar(props) {
                     }
                     .iconenabled{
                         margin-right:4px;
-                        color:lightgrey;
                     }
                     .icondisabled{
-                        color:black;
+                        color:black !important;
+                    }
+                    .icondisabled path{
+                        color:black !important;
                     }
                 `}
             </style>

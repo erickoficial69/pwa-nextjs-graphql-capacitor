@@ -25,7 +25,7 @@ function Block1() {
            `  
               .paralax{
                 grid-column: 1 / span 16;
-                background-image:url(/img/desktop.gif);
+                background-image:url(/img/codes-white.jpg);
                 background-color:#111;
                 background-size:cover;
                 background-position:center center;

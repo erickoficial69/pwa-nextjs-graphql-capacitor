@@ -5,13 +5,13 @@ function Footer() {
                     <h2>About</h2>
                 <article>
                     
-                    <h3>Diaz web app</h3>
+                    <b>Diaz web app</b>
                     <p>
                         Plataforma dedicada al desarrollo de software, para gestionar e impulsar todo tipo de emprendimiento, negocios y empresas a travez del desarrollo técnologico.
                     </p>
 
-                    <h3>contácto</h3>
-                    <ul>
+                    <b>contácto</b>
+                    <ul className="tecnologies" >
                         <li>
                             <button>
                                 facebook
@@ -36,14 +36,14 @@ function Footer() {
                 </article>
                 
                 <article>
-                    <h3>erick diaz</h3>
+                    <b>Erick Díaz</b>
                     <p>
                          Emprendedor, desarrollador de software y administrador de sistemas. Fundador y representante de la plataforma <b>Diaz web app</b>
                     </p>
 
-                    <h3>contácto</h3>
+                    <b>contácto</b>
 
-                    <ul>
+                    <ul className="tecnologies">
                         <li>
                             <button>
                                 facebook
@@ -67,23 +67,35 @@ function Footer() {
                 {
                     `
                     footer{
-                        background:#2d2d2d;
                         grid-column: 1 / span 16;
                     }
                     footer span{
                         grid-column: 2 / span 14;
                         display:flex;
-                        flex-flow:row wrap;
+                        flex-flow:column;
                         justify-content:space-between;
                     }
                     footer span h2{
                         width:100%;
-                        color:lightgrey;
                         text-align:center;
                     }
+                    footer span article b{
+                        width:100%;
+                        text-align:center;
+                    }
+                    footer span article p{
+                        padding:2vmin;
+                    }
                     footer span article{
-                        width:48%;
-                        color:lightgrey;
+                        width:99%;
+                    }
+                    @media (min-width:512px){
+                        footer span{
+                            flex-flow:row wrap;
+                        }
+                        footer span article{
+                            width:48%;
+                        }
                     }
                     `
                 }

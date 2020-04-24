@@ -10,10 +10,14 @@ export const devTools = (query,estado,estado2,estado3)=>{
         })
     }
 
-export const test = (query,setTitle)=>{
+export const test = (query)=>{
       request(
         'http://localhost:3100/graphql',
           query).then(data => {
             console.log(data.postAdded)
           })
+      }
+
+export const gqlLogin = (query)=>{
+       return request('http://localhost:3100/graphql',query)
       }

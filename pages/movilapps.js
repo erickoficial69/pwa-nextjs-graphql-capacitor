@@ -36,7 +36,7 @@ function MovilApp() {
       <div className='movilstyle'>
         <h1>Desarrollo de aplicaciones moviles</h1>
         <article>
-            <div style={{textAlign:"center"}}><AndroidTwoTone style={{fontSize:'122px'}} htmlColor='lightgreen'/></div>
+            <div style={{textAlign:"center"}}><AndroidTwoTone className='androidIcon' /></div>
             
             <h2>Android</h2>
             <p>
@@ -44,7 +44,7 @@ function MovilApp() {
             </p>
         </article> 
         <article>
-            <div style={{textAlign:"center"}} ><Apple style={{fontSize:'122px'}} htmlColor='grey'/></div>
+            <div style={{textAlign:"center"}} ><Apple className='appelIcon' /></div>
             
             <h2>IOS</h2>
             <p>
@@ -99,6 +99,15 @@ function MovilApp() {
             }
             .movilstyle p{
               color:white;
+            }
+            .movilstyle article svg{
+              font-size:111px;
+            }
+            .movilstyle article svg path{
+              color:lightgreen;
+            }
+            .movilstyle article:last-child svg path{
+              color:grey !important;
             }
             .movilstyle h2{
               color:white;

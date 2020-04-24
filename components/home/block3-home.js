@@ -29,6 +29,7 @@ function Block3(){ return(
           grid-column: 2 / span 14;
           display:grid;
           grid-template-columns:repeat(1,1fr);
+          padding:3vmin 1vmin;
         }
         .plusservice h1{
           line-height:2;
@@ -36,7 +37,7 @@ function Block3(){ return(
         .plusservice article{
           margin-botoom:2vmin;
           border-radius:5px;
-          box-shadow:0px 0px 1px grey;
+          box-shadow:0px 0px 1px white;
           padding:2vmin;
         }
         .plusservice article h2{
