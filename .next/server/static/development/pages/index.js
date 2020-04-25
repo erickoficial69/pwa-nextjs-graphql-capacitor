@@ -108,6 +108,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _graphql_querys_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../graphql-querys/index */ "./components/graphql-querys/index.js");
 var _jsxFileName = "/media/dwa/archivos/Developer-projects/dwa/components/chat/chat.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -122,6 +123,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 const Chat = () => {
   const {
     0: user,
@@ -131,27 +133,36 @@ const Chat = () => {
     0: openQuestion,
     1: setOpenQuestion
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const {
+    0: statusSend,
+    1: setStatusSend
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
 
-  const sendMessage = e => {};
+  const sendMessage = e => {
+    setStatusSend('sending');
+    e.preventDefault();
+    const gql = `
+        {
+            sendEmail(para:"${user.correo}" cuerpo:"${user.mensaje}")
+        }
+        `;
+    Object(_graphql_querys_index__WEBPACK_IMPORTED_MODULE_3__["sendEmail"])(gql, setStatusSend);
+  };
 
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_material_ui_icons__WEBPACK_IMPORTED_MODULE_1__["Mail"], {
     style: {
       position: 'fixed',
       right: '7%',
       cursor: 'pointer',
-      borderRadius: '50%',
-      boxShadow: '0px 0px 2px white',
       zIndex: 9,
       bottom: '65px',
-      width: '39px',
-      height: '39px',
-      padding: '3px',
-      background: '#2d2d2d'
+      width: '52px',
+      height: '52px'
     },
     onClick: () => setOpenQuestion(openQuestion === true ? false : true),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 24
     },
     __self: undefined
   }), __jsx("form", {
@@ -159,25 +170,25 @@ const Chat = () => {
     onSubmit: e => sendMessage(e),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 38
     },
     __self: undefined
   }, __jsx("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 40
     },
     __self: undefined
   }, "Dudas...?"), __jsx("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 42
     },
     __self: undefined
   }, "Tu correo"), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 44
     },
     __self: undefined
   }, user ? user.correo : null), __jsx("input", {
@@ -188,32 +199,35 @@ const Chat = () => {
     })),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 45
     },
     __self: undefined
   }), __jsx("textarea", {
     name: "message",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: undefined
-  }), __jsx("button", {
+    onChange: e => setUser(_objectSpread({}, user, {
+      mensaje: e.target.value
+    })),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 47
     },
     __self: undefined
+  }), __jsx("button", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: undefined
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["MenuItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 51
     },
     __self: undefined
   }, "send"))), __jsx("style", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 57
     },
     __self: undefined
   }, `
@@ -234,6 +248,20 @@ const Chat = () => {
                     border-radius:3px;
                     padding:1vmin;
                     box-shadow: 0px 0px 2px white;
+                }
+                .chat::after{
+                    content:"${statusSend === 'sending' ? 'enviando' : statusSend === 'enviado' ? 'Enviado!!!' : 'error'}";
+                    width:100%;
+                    height:100%;
+                    background:rgba(0,0,0, .7);
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    display:${statusSend === 'sending' || statusSend === 'error' || statusSend === 'enviado' ? 'flex;' : 'none;'}
+                    flex-flow:column;
+                    justify-content:center;
+                    align-items:center;
+                    font-weight:bold;
                 }
                 .chat h3{
                     line-height:1.3;
@@ -471,6 +499,7 @@ function Footer() {
                     footer span h2{
                         width:100%;
                         text-align:center;
+                        line-height:2;
                     }
                     footer span article b{
                         width:100%;
@@ -494,6 +523,47 @@ function Footer() {
 }
 
 
+
+/***/ }),
+
+/***/ "./components/graphql-querys/index.js":
+/*!********************************************!*\
+  !*** ./components/graphql-querys/index.js ***!
+  \********************************************/
+/*! exports provided: devTools, sendEmail */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "devTools", function() { return devTools; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sendEmail", function() { return sendEmail; });
+/* harmony import */ var graphql_request__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graphql-request */ "graphql-request");
+/* harmony import */ var graphql_request__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(graphql_request__WEBPACK_IMPORTED_MODULE_0__);
+
+const devTools = (query, estado, estado2, estado3) => {
+  Object(graphql_request__WEBPACK_IMPORTED_MODULE_0__["request"])('http://localhost:3100/graphql', query).then(data => {
+    estado(data.tools[0]);
+    estado2(data.tools[1]);
+    estado3(data.tools[2]);
+  });
+};
+const sendEmail = async (query, setStatusSend) => {
+  const data = await Object(graphql_request__WEBPACK_IMPORTED_MODULE_0__["request"])('http://localhost:3100/graphql', query);
+
+  function end() {
+    setStatusSend(false);
+  }
+
+  if (data.sendEmail === true) {
+    setStatusSend('enviado');
+    setTimeout(end, 2222);
+  }
+
+  if (data.sendEmail === false) {
+    setStatusSend('error');
+    setTimeout(end, 2222);
+  }
+};
 
 /***/ }),
 
@@ -538,7 +608,7 @@ function Block1() {
       lineNumber: 7
     },
     __self: this
-  }, "Desarrollamos sitios web, aplicaciones, para android / IOS y otros tipos de sofware adaptados a la necesidad del cliente."), __jsx("p", {
+  }, "Desarrollamos sitios web, aplicaciones, para Android / Ios y otros tipos de sofware adaptados a la necesidad del cliente."), __jsx("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -550,7 +620,7 @@ function Block1() {
       lineNumber: 13
     },
     __self: this
-  }, "Ofrecemos consultor\xEDa tecnol\xF3gica, necesaria previo al desarrollo de cualquier proyecto.")), __jsx("img", {
+  }, "Ofrecemos consultor\xEDa tecnol\xF3gica necesaria, previo al desarrollo de cualquier proyecto.")), __jsx("img", {
     src: "/img/logo.png",
     alt: "diaz web app",
     __source: {
@@ -1113,6 +1183,7 @@ function Navbar(props) {
     },
     __self: this
   }, status === 'home' ? __jsx("span", {
+    className: "icondisabled",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51
@@ -1148,6 +1219,7 @@ function Navbar(props) {
     },
     __self: this
   }), width < 721 ? '' : 'home')), status === 'web apps' ? __jsx("span", {
+    className: "icondisabled",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 64
@@ -1183,6 +1255,7 @@ function Navbar(props) {
     },
     __self: this
   }), width < 721 ? '' : 'desarrollo web')), status === 'movil apps' ? __jsx("span", {
+    className: "icondisabled",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 78
@@ -1254,6 +1327,7 @@ function Navbar(props) {
                         display:flex;
                         flex-flow:row nowrap;
                         justify-content:${width < 512 ? 'space-between;' : 'center;'}
+                        height:55px;
                     }
                     header span nav a{
                         display:flex;
@@ -1276,6 +1350,7 @@ function Navbar(props) {
                     }
                     .icondisabled{
                         color:black !important;
+                        background:#1d1d1d;
                     }
                     .icondisabled path{
                         color:black !important;
@@ -1298,13 +1373,13 @@ function Navbar(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 152
     },
     __self: this
   }, __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 169
     },
     __self: this
   }, "Loading...")));
@@ -3225,6 +3300,17 @@ module.exports = require("core-js/library/fn/symbol/iterator");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/weak-map");
+
+/***/ }),
+
+/***/ "graphql-request":
+/*!**********************************!*\
+  !*** external "graphql-request" ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("graphql-request");
 
 /***/ }),
 

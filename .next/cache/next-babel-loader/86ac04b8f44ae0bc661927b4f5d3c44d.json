@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { request } from 'graphql-request';\nexport var devTools = function devTools(query, estado, estado2, estado3) {\n  request('http://localhost:3100/graphql', query).then(function (data) {\n    estado(data.tools[0]);\n    estado2(data.tools[1]);\n    estado3(data.tools[2]);\n  });\n};","map":null,"metadata":{},"sourceType":"module"}

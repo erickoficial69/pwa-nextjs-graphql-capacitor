@@ -10,14 +10,20 @@ export const devTools = (query,estado,estado2,estado3)=>{
         })
     }
 
-export const test = (query)=>{
-      request(
-        'http://localhost:3100/graphql',
-          query).then(data => {
-            console.log(data.postAdded)
-          })
-      }
+export const sendEmail = async (query, setStatusSend)=>{
+        const data = await request('http://localhost:3100/graphql',query)
+        function end() {
+            setStatusSend(false)
+          }
 
-export const gqlLogin = (query)=>{
-       return request('http://localhost:3100/graphql',query)
+        if(data.sendEmail === true ){
+            setStatusSend('enviado')
+            setTimeout(end, 2222)
+        }
+
+        if(data.sendEmail === false ){
+            setStatusSend('error')
+            setTimeout(end, 2222)
+        }
+        
       }

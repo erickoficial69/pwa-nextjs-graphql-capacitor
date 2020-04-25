@@ -78,6 +78,7 @@ function Footer() {
                     footer span h2{
                         width:100%;
                         text-align:center;
+                        line-height:2;
                     }
                     footer span article b{
                         width:100%;

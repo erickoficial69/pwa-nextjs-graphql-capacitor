@@ -48,7 +48,7 @@ function Navbar(props) {
                     )}
                     
                     <nav>
-                        {status === 'home'?<span>
+                        {status === 'home'?<span className='icondisabled'>
                             <Home className='icondisabled'/>
 
                             {width < 721 ? '' :'home'}
@@ -61,7 +61,7 @@ function Navbar(props) {
                         </Link>
                         }
 
-                        {status === 'web apps'?<span>
+                        {status === 'web apps'?<span className='icondisabled'>
                             <Web className='icondisabled'/>
 
                             {width < 721 ? '' :'desarrollo web'}
@@ -75,7 +75,7 @@ function Navbar(props) {
                         </Link>
                         } 
                         
-                        {status === 'movil apps'?<span>
+                        {status === 'movil apps'?<span className='icondisabled'>
                                 <DeveloperMode className='icondisabled'/>
                                 
                                 {width < 721 ? '' :'desarrollo movil'}
@@ -119,6 +119,7 @@ function Navbar(props) {
                         display:flex;
                         flex-flow:row nowrap;
                         justify-content:${width < 512 ? 'space-between;':'center;'}
+                        height:55px;
                     }
                     header span nav a{
                         display:flex;
@@ -141,6 +142,7 @@ function Navbar(props) {
                     }
                     .icondisabled{
                         color:black !important;
+                        background:#1d1d1d;
                     }
                     .icondisabled path{
                         color:black !important;

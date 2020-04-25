@@ -5,13 +5,13 @@ function Block1() {
           <article>
           <h1>Desarrollo de sotfware</h1>
           <p>
-              Desarrollamos sitios web, aplicaciones, para android / IOS y otros tipos de sofware adaptados a la necesidad del cliente.
+              Desarrollamos sitios web, aplicaciones, para Android / Ios y otros tipos de sofware adaptados a la necesidad del cliente.
           </p>
           <p>
               Extiende tu negocio y llega a más clientes en cualquier parte del mundo, en cualquier dispositivo y en cualquier conexión. 
           </p>
           <p>
-              Ofrecemos consultoría tecnológica, necesaria previo al desarrollo de cualquier proyecto. 
+              Ofrecemos consultoría tecnológica necesaria, previo al desarrollo de cualquier proyecto. 
           </p>
           
           </article>
