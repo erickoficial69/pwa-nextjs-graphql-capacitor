@@ -76,7 +76,7 @@ const Chat = ()=>{
                     box-shadow: 0px 0px 2px white;
                 }
                 .chat::after{
-                    content:"${statusSend==='sending'?'enviando':statusSend==='enviado'?'Enviado!!!':'error'}";
+                    content:'${statusSend==='sending'?'enviando':statusSend==='enviado'?'Enviado!!!':'error'}';
                     width:100%;
                     height:100%;
                     background:rgba(0,0,0, .7);

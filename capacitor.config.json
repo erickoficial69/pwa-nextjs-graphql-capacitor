@@ -1,0 +1,17 @@
+{
+  "appId": "com.dwa.app",
+  "appName": "dwa",
+  "bundledWebRuntime": true,
+  "npmClient": "npm",
+  "webDir": ".next",
+  "cordova": {},
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 5000,
+      "launchAutoHide": false,
+      "showSpinner": true,
+      "backgroundColor": "#0000",
+      "androidSplashResourceName": "splash"
+    }
+  }
+}

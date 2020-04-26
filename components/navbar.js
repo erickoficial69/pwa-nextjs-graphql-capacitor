@@ -5,6 +5,7 @@ import Home from '@material-ui/icons/Home'
 import DeveloperMode from '@material-ui/icons/DeveloperMode'
 import Web from '@material-ui/icons/Web'
 import Chat from '../components/chat/chat'
+import {Backdrop, CircularProgress, LinearProgress} from '@material-ui/core'
 
 function Navbar(props) {
     const { navStatus } = props
@@ -55,7 +56,7 @@ function Navbar(props) {
                             </span>
                         :<Link href="/">
                             <a onClick={()=>setShow(true)} href="/">
-                                <Home className='iconenabled' />
+                                <Home className='iconenabled'/>
                                 {width < 721 ? '' :'home'}
                             </a>
                         </Link>
@@ -149,6 +150,14 @@ function Navbar(props) {
                     }
                 `}
             </style>
+            <Backdrop style={
+                    {
+                    zIndex:'99999',
+                 }
+                 } 
+                 open={show} >
+                    <CircularProgress />
+            </Backdrop>
             <span style={
                 {
                     position:'fixed',
@@ -160,7 +169,7 @@ function Navbar(props) {
                     bottom:'0',
                     width:'100vw',
                     height:'100vh',
-                    display: show === true ? 'flex':'none',
+                    display:'none',
                     justifyContent:'center',
                     alignItems:'center',
                     backgroundColor:'rgba(0,0,0, .5)'

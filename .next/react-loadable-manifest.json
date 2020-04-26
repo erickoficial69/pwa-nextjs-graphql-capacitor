@@ -1,10 +1,90 @@
 {
+  "./core-js.js": [
+    {
+      "id": "./node_modules/@ionic/pwa-elements/dist/esm/polyfills/core-js.js",
+      "name": "./node_modules/@ionic/pwa-elements/dist/esm/polyfills/core-js.js",
+      "file": "static/chunks/7.js",
+      "publicPath": "static/chunks/7.js"
+    }
+  ],
+  "./css-shim-8775d9ad-556f0cc2.js": [
+    {
+      "id": "./node_modules/@ionic/pwa-elements/dist/esm-es5/css-shim-8775d9ad-556f0cc2.js",
+      "name": "./node_modules/@ionic/pwa-elements/dist/esm-es5/css-shim-8775d9ad-556f0cc2.js",
+      "file": "static/chunks/stencil-polyfills-css-shim.js",
+      "publicPath": "static/chunks/stencil-polyfills-css-shim.js"
+    }
+  ],
   "./dev/noop": [
     {
       "id": "./node_modules/next/dist/client/dev/noop.js",
       "name": "./node_modules/next/dist/client/dev/noop.js",
       "file": "static/chunks/0.js",
       "publicPath": "static/chunks/0.js"
+    }
+  ],
+  "./dom-76cc7c7d-0a082895.js": [
+    {
+      "id": "./node_modules/@ionic/pwa-elements/dist/esm-es5/dom-76cc7c7d-0a082895.js",
+      "name": "./node_modules/@ionic/pwa-elements/dist/esm-es5/dom-76cc7c7d-0a082895.js",
+      "file": "static/chunks/stencil-polyfills-dom.js",
+      "publicPath": "static/chunks/stencil-polyfills-dom.js"
+    }
+  ],
+  "./dom.js": [
+    {
+      "id": "./node_modules/@ionic/pwa-elements/dist/esm/polyfills/dom.js",
+      "name": "./node_modules/@ionic/pwa-elements/dist/esm/polyfills/dom.js",
+      "file": "static/chunks/8.js",
+      "publicPath": "static/chunks/8.js"
+    }
+  ],
+  "./pwa-action-sheet.entry.js": [
+    {
+      "id": "./node_modules/@ionic/pwa-elements/dist/esm-es5/pwa-action-sheet.entry.js",
+      "name": "./node_modules/@ionic/pwa-elements/dist/esm-es5/pwa-action-sheet.entry.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./pwa-camera-modal-instance.entry.js": [
+    {
+      "id": "./node_modules/@ionic/pwa-elements/dist/esm-es5/pwa-camera-modal-instance.entry.js",
+      "name": "./node_modules/@ionic/pwa-elements/dist/esm-es5/pwa-camera-modal-instance.entry.js",
+      "file": "static/chunks/2.js",
+      "publicPath": "static/chunks/2.js"
+    }
+  ],
+  "./pwa-camera-modal.entry.js": [
+    {
+      "id": "./node_modules/@ionic/pwa-elements/dist/esm-es5/pwa-camera-modal.entry.js",
+      "name": "./node_modules/@ionic/pwa-elements/dist/esm-es5/pwa-camera-modal.entry.js",
+      "file": "static/chunks/3.js",
+      "publicPath": "static/chunks/3.js"
+    }
+  ],
+  "./pwa-camera.entry.js": [
+    {
+      "id": "./node_modules/@ionic/pwa-elements/dist/esm-es5/pwa-camera.entry.js",
+      "name": "./node_modules/@ionic/pwa-elements/dist/esm-es5/pwa-camera.entry.js",
+      "file": "static/chunks/4.js",
+      "publicPath": "static/chunks/4.js"
+    }
+  ],
+  "./pwa-toast.entry.js": [
+    {
+      "id": "./node_modules/@ionic/pwa-elements/dist/esm-es5/pwa-toast.entry.js",
+      "name": "./node_modules/@ionic/pwa-elements/dist/esm-es5/pwa-toast.entry.js",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    }
+  ],
+  "./shadow-css-d7d058ec-d59cb009.js": [
+    {
+      "id": "./node_modules/@ionic/pwa-elements/dist/esm-es5/shadow-css-d7d058ec-d59cb009.js",
+      "name": "./node_modules/@ionic/pwa-elements/dist/esm-es5/shadow-css-d7d058ec-d59cb009.js",
+      "file": "static/chunks/6.js",
+      "publicPath": "static/chunks/6.js"
     }
   ]
 }
