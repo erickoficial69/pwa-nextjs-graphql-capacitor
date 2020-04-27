@@ -68,7 +68,7 @@ const nextConfig = {
             /*end media cache local app*/
             /*start external cache apis */
             {
-                urlPattern: /^https?:\/\/localhost:3100\/.*/,
+                urlPattern: /^https?:\/\/backenddwa.herokuapp.com\/.*/,
                 handler: 'StaleWhileRevalidate',
                 options: {
                     cacheName: 'offlineCache',
@@ -78,7 +78,7 @@ const nextConfig = {
                 }
             },
             {
-                urlPattern: /^https?:\/\/localhost:3100\/graphql/,
+                urlPattern: /^https?:\/\/backenddwa.herokuapp.com\/graphql/,
                 handler: 'StaleWhileRevalidate',
                 options: {
                     cacheName: 'offlineCache',
