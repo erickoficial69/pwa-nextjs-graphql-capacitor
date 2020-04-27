@@ -7,11 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "next": "next start",
-<<<<<<< HEAD
-    "export": "next export",
-=======
     "postinstall": "next build",
->>>>>>> fc2cadc0b74186fb991b002aed4cc67b156c51f4
+    "export": "next export",
     "start": "cross-env NODE_ENV=production node server.js"
   },
   "dependencies": {
