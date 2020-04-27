@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { HomeOutlined, DeveloperModeOutlined, WebOutlined} from '@material-ui/icons'
 import Chat from '../components/chat/chat'
 import {Backdrop, Icon, IconButton } from '@material-ui/core'
-//Capatitor import for network
+//Capatitor import 
 import { Plugins } from '@capacitor/core';
 
 const { Network } = Plugins;
