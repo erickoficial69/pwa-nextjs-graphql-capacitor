@@ -1,8 +1,12 @@
 import { request } from 'graphql-request'
-const uri = process.env.NODE_ENV === 'poduction'? 'https://backenddwa.herokuapp.com/graphql' : 'http://localhost:3100/graphql'
+const apis = {
+  uri : process.env.GRAPHQL_URI || 'http://localhost:3100/graphql'
+}
+
+
 export const devTools = (query,estado,estado2,estado3)=>{
     request(
-      uri,
+      apis.uri,
         query).then(data => {
           estado(data.tools[0])
           estado2(data.tools[1])
@@ -11,7 +15,7 @@ export const devTools = (query,estado,estado2,estado3)=>{
     }
 
 export const sendEmail = async (query, setStatusSend)=>{
-        const data = await request(uri,query)
+        const data = await request(apis.uri,query)
         function end() {
             setStatusSend(false)
           }
