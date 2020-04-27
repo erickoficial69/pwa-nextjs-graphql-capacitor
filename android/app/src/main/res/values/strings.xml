@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">dap</string>
+    <string name="title_activity_main">dap</string>
+    <string name="package_name">com.dwa.app</string>
+    <string name="custom_url_scheme">com.dwa.app</string>
+</resources>

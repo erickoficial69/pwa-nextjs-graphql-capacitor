@@ -1,0 +1,9 @@
+{
+  "appId": "com.dwa.app",
+  "appName": "dap",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "out",
+  "linuxAndroidStudioPath": "/home/dwa/Documents/android-studio/bin/studio.sh",
+  "cordova": {}
+}

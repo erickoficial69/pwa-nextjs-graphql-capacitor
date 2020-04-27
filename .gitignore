@@ -1,4 +1,8 @@
 node_modules
 .next
+<<<<<<< HEAD
 android
+=======
+next
+>>>>>>> fc2cadc0b74186fb991b002aed4cc67b156c51f4
 out

@@ -1,8 +1,8 @@
 import { request } from 'graphql-request'
-
+const uri = process.env.GRAPHQL_URI || 'http://localhost:3100/graphql'
 export const devTools = (query,estado,estado2,estado3)=>{
     request(
-      'http://localhost:3100/graphql',
+      uri,
         query).then(data => {
           estado(data.tools[0])
           estado2(data.tools[1])
@@ -11,7 +11,7 @@ export const devTools = (query,estado,estado2,estado3)=>{
     }
 
 export const sendEmail = async (query, setStatusSend)=>{
-        const data = await request('http://localhost:3100/graphql',query)
+        const data = await request(uri,query)
         function end() {
             setStatusSend(false)
           }
