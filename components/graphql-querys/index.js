@@ -1,5 +1,5 @@
 import { request } from 'graphql-request'
-const uri = process.env.NODE_ENV === 'poduction'? 'backenddwa.herokuapp.com/graphql' : 'http://localhost:3100/graphql'
+const uri = process.env.NODE_ENV === 'poduction'? 'https://backenddwa.herokuapp.com/graphql' : 'http://localhost:3100/graphql'
 export const devTools = (query,estado,estado2,estado3)=>{
     request(
       uri,
