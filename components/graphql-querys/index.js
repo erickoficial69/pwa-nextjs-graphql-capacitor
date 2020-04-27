@@ -5,6 +5,7 @@ const apis = {
 
 
 export const devTools = (query,estado,estado2,estado3)=>{
+  console.log(process.env.GRAPHQL_URI)
     request(
       apis.uri,
         query).then(data => {
@@ -15,6 +16,7 @@ export const devTools = (query,estado,estado2,estado3)=>{
     }
 
 export const sendEmail = async (query, setStatusSend)=>{
+  
         const data = await request(apis.uri,query)
         function end() {
             setStatusSend(false)
