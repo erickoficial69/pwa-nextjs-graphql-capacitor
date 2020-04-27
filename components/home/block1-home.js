@@ -1,9 +1,10 @@
+
 function Block1() {
 
   return <>
-  <div className="paralax">
+  <div className="paralax intro1">
           <article>
-          <h1>Desarrollo de sotfware</h1>
+          <h1>Desarrollo de sotfware </h1>
           <p>
               Desarrollamos sitios web, aplicaciones, para Android / Ios y otros tipos de sofware adaptados a la necesidad del cliente.
           </p>

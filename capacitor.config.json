@@ -2,14 +2,14 @@
   "appId": "com.dwa.app",
   "appName": "dwa",
   "bundledWebRuntime": true,
+  "linuxAndroidStudioPath": "/home/dwa/Documents/android-studio/bin/studio.sh",
   "npmClient": "npm",
-  "webDir": ".next",
+  "webDir": "out",
   "cordova": {},
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 5000,
-      "launchAutoHide": false,
-      "showSpinner": true,
+      "launchAutoHide": true,
       "backgroundColor": "#0000",
       "androidSplashResourceName": "splash"
     }

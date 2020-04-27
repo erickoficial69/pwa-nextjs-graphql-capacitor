@@ -1,11 +1,23 @@
+import {defineCustomElements} from '@ionic/pwa-elements/loader'
 import Link from 'next/link'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
-import Home from '@material-ui/icons/Home'
-import DeveloperMode from '@material-ui/icons/DeveloperMode'
-import Web from '@material-ui/icons/Web'
+import { HomeOutlined, DeveloperModeOutlined, WebOutlined} from '@material-ui/icons'
 import Chat from '../components/chat/chat'
-import {Backdrop, CircularProgress, LinearProgress} from '@material-ui/core'
+import {Backdrop, Icon, IconButton } from '@material-ui/core'
+//Capatitor import
+import { Plugins } from '@capacitor/core';
+
+const { Network } = Plugins;
+
+const network = (setNet)=>{
+    Network.addListener("networkStatusChange", rs=>{
+        setNet(rs)
+    })
+}
+const inactive = {
+    color:"darkgoldenrod"
+  }
 
 function Navbar(props) {
     const { navStatus } = props
@@ -13,8 +25,10 @@ function Navbar(props) {
     const [width, setWidth] = useState(null)
     const [status, setStatus] = useState('')
     const [show, setShow] = useState(false)
+    const [net,setNet] = useState({})
 
     useEffect(() => {
+        defineCustomElements(window)
         setWidth(window.innerWidth)
 
         window.addEventListener('resize', () => {
@@ -24,129 +38,170 @@ function Navbar(props) {
             setWidth(window.innerWidth)
         })
     })
-
     useEffect(() => {
         setStatus(navStatus)
-    })
+    },[])
+    useEffect(() => {
+        network(setNet)
+    },[])
     
     return <>
             <Head>
                 <link rel="manifest" href="/manifest.json" />
-                <link rel='stylesheet' href='/css/reset.css' />
+                <link rel='stylesheet' href='/css/dark.css' />
                 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1 user-scalable=no" />
             </Head>
 
             <header>
                 <span>
-                    {width < 721 ?
-                        null
-                    : status === 'home'?<span style={{color:'lightgrey'}}>
-                           <img height="25vh" style={{marginRight:'4px'}} src="/img/logo.png" alt="dwa"/> diaz web app
-                    </span>:(
-                        <Link href="/">
-                            <a onClick={()=>setShow(true)} href="/"><img height="25vh" style={{marginRight:'4px'}} src="/img/logo.png" alt="dwa"/>{width < 721 ? '' :'diaz web app'}</a>
-                        </Link>
-                    )}
-                    
+                    {
+                        width > 720 ? (
+                            status === 'home'?(
+                                <p style={inactive} className="inactive" >
+                                        <img src="/img/logo.png" width="32px" />
+                                        diaz web app
+                                </p>
+                            ):(
+                                <Link href="/" >
+                                    <a href="/">
+                                        <img src="/img/logo.png" width="32px" />
+                                        diaz web app
+                                    </a>
+                                </Link>
+                            )
+                        ):null
+                    }
                     <nav>
-                        {status === 'home'?<span className='icondisabled'>
-                            <Home className='icondisabled'/>
-
-                            {width < 721 ? '' :'home'}
-                            </span>
-                        :<Link href="/">
+                    {
+                        status === 'home' ?(
+                            <p style={inactive} className="inactive" >
+                                <IconButton style={inactive} ><HomeOutlined style={inactive} color='secondary' /></IconButton>
+                                {
+                                    width > 641 ? 'home' : null
+                                }
+                            </p>
+                        ):(
+                        <Link href="/">
                             <a onClick={()=>setShow(true)} href="/">
-                                <Home className='iconenabled'/>
-                                {width < 721 ? '' :'home'}
+                            <IconButton><HomeOutlined/></IconButton>
+                                {
+                                    width > 641 ? 'home' : null
+                                }
                             </a>
-                        </Link>
-                        }
+                        </Link> 
+                        )
+                    }
 
-                        {status === 'web apps'?<span className='icondisabled'>
-                            <Web className='icondisabled'/>
-
-                            {width < 721 ? '' :'desarrollo web'}
-                            </span>
-                        :<Link href="/webapps">
+                    {
+                        status === 'web apps' ?(
+                            <p style={inactive} className="inactive" >
+                                <IconButton style={inactive} width="32px" height="32px">
+                                    <WebOutlined style={inactive}/>
+                                </IconButton>
+                                {
+                                    width > 641 ? 'web apps' : null
+                                }
+                            </p>
+                        ):(
+                        <Link href="/webapps">
                             <a onClick={()=>setShow(true)} href="/webapps.html">
-                                <Web className='iconenabled'/>
-                               
-                               {width < 721 ? '' :'desarrollo web'}
+                                <IconButton width="32px" height="32px">
+                                    <WebOutlined/>
+                                    
+                                </IconButton>
+                                {
+                                    width > 641 ? 'web apps' : null
+                                }
                             </a>
-                        </Link>
-                        } 
-                        
-                        {status === 'movil apps'?<span className='icondisabled'>
-                                <DeveloperMode className='icondisabled'/>
-                                
-                                {width < 721 ? '' :'desarrollo movil'}
-                        </span>
-                        :<Link href="/movilapps">
-                            <a onClick={()=>setShow(true)} href="/movilapps.html">
-                                <DeveloperMode className='iconenabled'/>
+                        </Link> 
+                        )
+                    }
 
-                                {width < 721 ? '' :'desarrollo movil'}
+                    {
+                        status === 'movil apps' ?(
+                            <p style={inactive} className="inactive" >
+                                <IconButton style={inactive}><DeveloperModeOutlined style={inactive}/></IconButton>
+                                {
+                                    width > 641 ? 'movil apps' : null
+                                }
+                            </p>
+                        ):(
+                        <Link href="/movilapps">
+                            <a onClick={()=>setShow(true)} href="/movilapps.html">
+                            <IconButton><DeveloperModeOutlined/></IconButton>
+                                {
+                                    width > 641 ? 'movil apps' : null
+                                }
                             </a>
-                        </Link>}
-                        
+                        </Link> 
+                        )
+                    }
                     </nav>
                 </span>
             </header>
-                <Chat />
-            
+            <Chat net={net}/>
             <style>
                 {`
+
+                    :root{
+                        --font-size:16px;
+                        --iconColor:rgb(0, 135, 224);
+                        --iconColorButton:rgb(255, 255, 255);
+                        --textColor:lightgrey;
+                        --backgroundColor:#1d1d1d;
+                        --themeColor:#2d2d2d;
+                    }
                     header{
                         position:fixed;
                         ${width < 721 ? 'bottom:0;' : 'top:0;'}
-                        background:#2d2d2d;
-                        height:55px;
+                        background:var(--themeColor);
+                        height:52px;
                         z-index:999;
                     }
                     main{
-                        height:calc(100vh - 55px);
-                        ${width < 721 ? 'top:0;' : 'top:55px;'}
+                        height:calc(100vh - 52px);
+                        ${width < 721 ? 'top:0;' : 'top:52px;'}
                     }
                     header span{
                         grid-column: 2 / span 14;
                         display:flex;
                         flex-flow:row nowrap;
                         align-items:center;
-                        justify-content:${width < 721 ? 'center;':'space-between;'};
+                        justify-content:${width <720?'center;':'space-between;'}
+                        height:52px;
+                        overflow:hidden;
                     }
                     header span nav{
-                        width:${width < 721 ? '100vmin;':'auto;'}
-                        text-align:center;
                         display:flex;
                         flex-flow:row nowrap;
-                        justify-content:${width < 512 ? 'space-between;':'center;'}
-                        height:55px;
-                    }
-                    header span nav a{
-                        display:flex;
-                        flex-flow: row nowrap;
-                        justify-content:center;
                         align-items:center;
-                        float:left;
+                        justify-content:${width <720?'space-between;':"flex-end;"}
+                        height:52px;
+                        overflow:hidden;
+                        ${width <720?'width:100%;':null}
                     }
+
                     header span a{
                         display:flex;
-                        flex-flow: row nowrap;
-                        justify-content:center;
+                        flex-flow:row nowrap;
+                        justify-content:space-between;
                         align-items:center;
-                        margin: 0 5px;
-                        text-transform: capitalize;
-                        color:lightgrey;
+                        padding:0 2vmin;
+                        text-transform:capitalize;
                     }
-                    .iconenabled{
-                        margin-right:4px;
+                    
+                    header span a svg{
+                        color:var(--iconColor);
                     }
-                    .icondisabled{
-                        color:black !important;
-                        background:#1d1d1d;
+                    header span a img{
+                        margin-right:5px;
                     }
-                    .icondisabled path{
-                        color:black !important;
+                    header span p{
+                        display:flex;
+                        flex-flow:row nowrap;
+                        justify-content:space-between;
+                        align-items:center;
+                        text-transform:capitalize;
                     }
                 `}
             </style>
@@ -156,27 +211,8 @@ function Navbar(props) {
                  }
                  } 
                  open={show} >
-                    <CircularProgress />
+                    <img src="/img/loading-chulo.gif" />
             </Backdrop>
-            <span style={
-                {
-                    position:'fixed',
-                    zIndex:'99999',
-                    color:'lightgrey',
-                    top:'0',
-                    left:'0',
-                    right:'0',
-                    bottom:'0',
-                    width:'100vw',
-                    height:'100vh',
-                    display:'none',
-                    justifyContent:'center',
-                    alignItems:'center',
-                    backgroundColor:'rgba(0,0,0, .5)'
-                    }
-                } >
-                <h2>Loading...</h2>
-            </span>
         </>
 }
 

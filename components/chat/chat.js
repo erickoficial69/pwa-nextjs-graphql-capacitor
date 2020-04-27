@@ -1,12 +1,14 @@
 import { useState } from 'react'
-import { Mail } from '@material-ui/icons'
+import { Mail, Send, WifiOff } from '@material-ui/icons'
 import { MenuItem } from '@material-ui/core'
 import { sendEmail } from '../graphql-querys/index'
 
-const Chat = ()=>{
+const Chat = (props)=>{
     const [user, setUser] = useState({})
     const [openQuestion, setOpenQuestion] = useState(false)
     const [statusSend, setStatusSend] = useState(false)
+
+    const {net} = props
 
     const sendMessage =  (e)=>{
         setStatusSend('sending')
@@ -19,44 +21,85 @@ const Chat = ()=>{
        sendEmail(gql,setStatusSend)
        
     }
-
     return <>
-            <Mail  
+    {
+        net.connected === false?(
+            <button  
+            className="wifiOff"
                 style={
                     {
                         position:'fixed',
-                        right:'7%',
+                        right:'4%',
+                        cursor:'hand',
+                        zIndex:8,
+                        bottom:'115px',
+                        width:'52px', 
+                        height:'52px'
+                    }
+                } >
+            <WifiOff style={
+                {
+                    width:'52px', 
+                    height:'52px'
+                }
+            } />
+
+            </button>
+        ):null
+    }
+            
+            <button  
+                className="butonEmail"
+                onClick={()=>setOpenQuestion(openQuestion===true?false:true)} 
+                style={
+                    {
+                        position:'fixed',
+                        right:'4%',
                         cursor:'pointer',
                         zIndex:9,
                         bottom:'65px',
                         width:'52px', 
                         height:'52px'
                     }
-                }  
-                onClick={()=>setOpenQuestion(openQuestion===true?false:true)}
-                 />
-        <form className='chat' onSubmit={e=>sendMessage(e)} >
+                } >
+            <Mail style={
+                {
+                    width:'52px', 
+                    height:'52px'
+                }
+            } />
+            </button>
+        <form message={statusSend==='sending'?'enviando':statusSend==='enviado'?'Enviado!!!':'error'} className='chat' onSubmit={e=>sendMessage(e)} >
                 
             <h3>Dudas...?</h3>
 
             <label>Tu correo</label>
             
-            <p>{user?user.correo:null}</p>
             <input type='email' name='nombre' 
             onChange={e=>setUser({...user, correo:e.target.value})}/>
             <textarea name='message' onChange={e=>setUser({...user, mensaje:e.target.value})} >
                 
             </textarea>
-            <button>
-            <MenuItem>
-                send
-            </MenuItem>
+             <button
+                    className={net.connected === false? "wifiOff" : ""} 
+                    disabled={net.connected === false? true : false} >
+                    
+                    <MenuItem>
+                    {net.connected === false? <><WifiOff/></>: <><Send/> send</>}
+                    
+                    </MenuItem>
             </button>
         </form>
 
         <style>
             {
                 `
+                .wifiOff path{
+                    color:darkorange;
+                }
+                .butonEmail path{
+                    color:var(--iconColor);
+                }
                 .chat{
                     z-index:8;
                     height:${!openQuestion?'44px;' : '315px;'} 
@@ -64,7 +107,7 @@ const Chat = ()=>{
                     width:${!openQuestion?'44px;' : '220px;'}
                     background:#2d2d2d;
                     position:fixed;
-                    right:7%;
+                    right:4%;
                     bottom:65px;
                     overflow:hidden;
                     transition:all .3s cubic-bezier(0.215, 1.410, 0.355, 1);
@@ -76,7 +119,7 @@ const Chat = ()=>{
                     box-shadow: 0px 0px 2px white;
                 }
                 .chat::after{
-                    content:'${statusSend==='sending'?'enviando':statusSend==='enviado'?'Enviado!!!':'error'}';
+                    content:attr(message);
                     width:100%;
                     height:100%;
                     background:rgba(0,0,0, .7);

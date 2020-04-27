@@ -13,24 +13,24 @@ function Footer() {
                     <b>contácto</b>
                     <ul className="tecnologies" >
                         <li>
-                            <button>
+                            
                                 facebook
-                            </button>
+                            
                         </li>
                         <li>
-                            <button>
+                            
                                 instagram
-                            </button>
+                            
                         </li>
                         <li>
-                            <button>
+                            
                                 gmail
-                            </button>
+                            
                         </li>
                         <li>
-                            <button>
+                            
                                 twitter
-                            </button>
+                            
                         </li>
                     </ul>
                 </article>
@@ -45,19 +45,19 @@ function Footer() {
 
                     <ul className="tecnologies">
                         <li>
-                            <button>
+                            
                                 facebook
-                            </button>
+                            
                         </li>
                         <li>
-                            <button>
+                            
                                 instagram
-                            </button>
+                            
                         </li>
                         <li>
-                            <button>
+                            
                                 gmail
-                            </button>
+                            
                         </li>
                     </ul>
                 </article>
@@ -68,6 +68,7 @@ function Footer() {
                     `
                     footer{
                         grid-column: 1 / span 16;
+                        background:var(--themeColor);
                     }
                     footer span{
                         grid-column: 2 / span 14;

@@ -78,7 +78,7 @@ const nextConfig = {
                 }
             },
             {
-                urlPattern: /^https?:\/\/localhost:3100\/graphql\/.*/,
+                urlPattern: /^https?:\/\/localhost:3100\/graphql/,
                 handler: 'StaleWhileRevalidate',
                 options: {
                     cacheName: 'offlineCache',

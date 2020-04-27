@@ -15,28 +15,29 @@ const query = `{tools(nombre:"movil"){
 `
 
 function MovilApp() {
-  const [title, setTitle] = useState('')
+  const title = 'movil apps'
   const [tools, setTools] = useState([])
   const [tools2, setTools2] = useState([])
   const [tools3, setTools3] = useState([])
 
   useEffect(() => {
-    setTitle('movil apps')
     devTools(query,setTools,setTools2,setTools3)
   },[])
 
  
-  return <main >
+  return <>
           <Head>
             <title>{title}</title>
 
           </Head>
           <Navbar navStatus={title} />
+  <main >
+          
 
-      <div className='movilstyle'>
+      <div className='movilstyle intro1'>
         <h1>Desarrollo de aplicaciones moviles</h1>
         <article>
-            <div style={{textAlign:"center"}}><AndroidTwoTone className='androidIcon' /></div>
+            <div style={{textAlign:"center"}}><AndroidTwoTone style={{color:"green", width:"100px"}} className='androidIcon' /></div>
             
             <h2>Android</h2>
             <p>
@@ -69,7 +70,9 @@ function MovilApp() {
           </ul>
       </section>
       <Footer/>
-      <style>
+      
+    </main>
+    <style>
         {
            ` 
            section{
@@ -120,7 +123,7 @@ function MovilApp() {
             }
             `}
       </style>
-    </main>
+  </>
 }
 
 export default MovilApp

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+import {MenuItem} from '@material-ui/core'
 
 function Block2() {
   return <>
@@ -5,10 +7,19 @@ function Block2() {
         <article>
             <h2>Web apps</h2>
             <img style={{ width: '90%', maxWidth: '100vmin', }} src='/img/webResponsive.gif' alt="frontend apps" />
-            <br/><br/>
+            
             <p>
               Desarrollamos plataformas web para particulares y comercios con tecnologías como <b>progressive web apps (pwa) y webasembly (wassm)</b>
             </p>
+            <Link href="/webapps">
+              <MenuItem style={{background:"var(--themeColor)"}} >
+              
+                <a href="/webapps.html">
+                  Ver más
+                </a>
+              
+              </MenuItem>
+            </Link>
         </article> 
         <article>
             <h2>Movil apps</h2>
@@ -16,6 +27,15 @@ function Block2() {
             <p>
               Desarrollamos aplicaciones moviles particulares y comercios con tecnología de punta y el mejor rendimiento del mercado.
             </p>
+            <Link href="/movilapps">
+              <MenuItem style={{background:"var(--themeColor)"}} >
+              
+                <a href="/movilapps.html">
+                  Ver más
+                </a>
+              
+              </MenuItem>
+            </Link>
         </article>
         <article>
             <h2>Servicios devOps</h2>
@@ -23,6 +43,15 @@ function Block2() {
             <p>
               Manten en linea, protege la base de datos, gana rendimiento, crea respaldos despliega y actualiza continuamente tu aplicación en nuestros cloud servers.
             </p>
+            <Link href="/devops">
+              <MenuItem style={{background:"var(--themeColor)"}} >
+              
+                <a href="/devops.html">
+                  Ver más
+                </a>
+              
+              </MenuItem>
+            </Link>
         </article>
       </ul>
         <style>
@@ -44,7 +73,10 @@ function Block2() {
                 padding:2vmin;
                 color:grey;
                 height:98vmin;
-                overflow:hidden;              
+                overflow:hidden;
+                display:flex;
+                flex-flow:column;
+                justify-content:space-between;              
               }
               .block2 article h2{
                   text-align:center;
