@@ -67,26 +67,7 @@ const nextConfig = {
             },
             /*end media cache local app*/
             /*start external cache apis */
-            {
-                urlPattern: /^https?:\/\/backenddwa.herokuapp.com\/.*/,
-                handler: 'StaleWhileRevalidate',
-                options: {
-                    cacheName: 'offlineCache',
-                    expiration: {
-                    maxEntries: 900
-                    }
-                }
-            },
-            {
-                urlPattern: /^https?:\/\/backenddwa.herokuapp.com\/graphql/,
-                handler: 'StaleWhileRevalidate',
-                options: {
-                    cacheName: 'offlineCache',
-                    expiration: {
-                    maxEntries: 900
-                    }
-                }
-            },
+            
             {
                 urlPattern: /^https?.*/,
                 handler: 'NetworkFirst',
