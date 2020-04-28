@@ -6,6 +6,7 @@ const apis = {
 
 export const devTools = (query,estado,estado2,estado3)=>{
   console.log(process.env.GRAPHQL_URI)
+  console.log(process.env.NODE_ENV)
     request(
       apis.uri,
         query).then(data => {

@@ -1,6 +1,7 @@
 const withOffline = require('next-offline')
 const nextConfig = {
     workboxOpts: {
+        swDest: './service-worker.js',
         runtimeCaching: [
             /*start routes cache local app*/
             {
