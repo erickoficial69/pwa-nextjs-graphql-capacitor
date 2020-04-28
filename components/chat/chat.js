@@ -43,8 +43,9 @@ const Chat = (props)=>{
     }
 
     useEffect(()=>{
-        notificacion()
+        notificacion(net)
     })
+
     return <>
     {
         net.connected === false?(

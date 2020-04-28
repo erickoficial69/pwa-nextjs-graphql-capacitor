@@ -2,8 +2,8 @@ const withPWA = require('next-pwa')
  
 module.exports = withPWA({
     pwa: {
-        disable: false,
-        register: true,
+        disable: process.env.NODE_ENV === 'production'? false : true,
+        register: process.env.NODE_ENV === 'production'? true : false,
         scope: '/',
         sw: 'sw.js',
         dest : 'public',
