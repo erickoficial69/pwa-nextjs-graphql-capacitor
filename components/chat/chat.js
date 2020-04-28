@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Mail, Send, WifiOff } from '@material-ui/icons'
 import { MenuItem } from '@material-ui/core'
 import { sendEmail } from '../graphql-querys/index'
@@ -21,6 +21,30 @@ const Chat = (props)=>{
        sendEmail(gql,setStatusSend)
        
     }
+    const notificacion = async(net)=>{
+        const sw = await navigator.serviceWorker.getRegistration()
+        await Notification.requestPermission()
+        
+        if(net.connected === false){
+            if(sw){
+                sw.showNotification('offline',{
+                    icon:'/img/logo.png',
+                    body:'no tienes conexión a internet'
+                })
+            }else{
+                new Notification('offline',{
+                    icon:'/img/logo.png',
+                    body:'no tienes conexión a internet'
+                })
+            }
+        }
+
+        
+    }
+
+    useEffect(()=>{
+        notificacion()
+    })
     return <>
     {
         net.connected === false?(

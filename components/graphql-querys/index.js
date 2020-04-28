@@ -1,12 +1,9 @@
 import { request } from 'graphql-request'
 const apis = {
-  uri : process.env.GRAPHQL_URI || 'http://localhost:3100/graphql'
+  uri : process.env.NODE_ENV === 'production'? 'https://backenddwa.herokuapp.com/graphql':'http://localhost:3100/graphql'
 }
 
-
 export const devTools = (query,estado,estado2,estado3)=>{
-  console.log(process.env.GRAPHQL_URI)
-  console.log(process.env.NODE_ENV)
     request(
       apis.uri,
         query).then(data => {

@@ -2,27 +2,27 @@
   "name": "dwa",
   "version": "1.0.0",
   "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).",
-  "main": "next.config.js",
+  "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "next": "next start",
     "postinstall": "next build",
     "export": "next export",
-    "start": "cross-env NODE_ENV=production node server.js"
+    "start": "cross-env NODE_ENV=production next start"
   },
   "dependencies": {
     "@capacitor/android": "^1.5.0",
     "@capacitor/core": "^1.5.0",
-    "@ionic/pwa-elements": "^1.5.1",
+    "@ionic/pwa-elements": "^1.5.2",
+    "@ionic/react-hooks": "0.0.6",
     "@material-ui/core": "^4.9.9",
     "@material-ui/icons": "^4.9.1",
     "cross-env": "^7.0.0",
     "graphql-request": "^1.8.2",
     "next": "^9.3.5",
-    "next-offline": "^5.0.0",
-    "react": "16.13.0",
-    "react-dom": "16.13.0",
+    "next-pwa": "^2.3.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.0",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {

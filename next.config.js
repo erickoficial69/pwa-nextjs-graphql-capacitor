@@ -1,85 +1,113 @@
-const withOffline = require('next-offline')
-const nextConfig = {
-    workboxOpts: {
-        swDest: './service-worker.js',
-        runtimeCaching: [
-            /*start routes cache local app*/
+const withPWA = require('next-pwa')
+ 
+module.exports = withPWA({
+    pwa: {
+        disable: false,
+        register: true,
+        scope: '/',
+        sw: 'sw.js',
+        dest : 'public',
+
+        runtimeCaching:[
             {
-                urlPattern: /.*/,
+                urlPattern: /^https:\/\/fonts\.(?:googleapis|gstatic)\.com\/.*/i,
                 handler: 'CacheFirst',
                 options: {
-                    cacheName: 'offlineCache',
-                    expiration: {
-                    maxEntries: 900
-                    }
+                cacheName: 'google-fonts',
+                expiration: {
+                    maxEntries: 4,
+                    maxAgeSeconds: 365 * 24 * 60 * 60 // 365 days
+                }
                 }
             },
             {
-                urlPattern: /webaps\/.*/,
+                urlPattern: /^https:\/\/use\.fontawesome\.com\/releases\/.*/i,
                 handler: 'CacheFirst',
                 options: {
-                    cacheName: 'offlineCache',
-                    expiration: {
-                    maxEntries: 900
-                    }
+                cacheName: 'font-awesome',
+                expiration: {
+                    maxEntries: 1,
+                    maxAgeSeconds: 365 * 24 * 60 * 60 // 365 days
+                }
                 }
             },
             {
-                urlPattern: /movilapps\/.*/,
-                handler: 'CacheFirst',
+                urlPattern: /\.(?:eot|otf|ttc|ttf|woff|woff2|font.css)$/i,
+                handler: 'StaleWhileRevalidate',
                 options: {
-                    cacheName: 'offlineCache',
-                    expiration: {
-                    maxEntries: 900
-                    }
+                cacheName: 'static-font-assets',
+                expiration: {
+                    maxEntries: 4,
+                    maxAgeSeconds: 7 * 24 * 60 * 60 // 7 days
                 }
-            },
-            /*end routes cache local app*/
-            /*start media cache local app*/
-            {
-                urlPattern: /css\/.*/,
-                handler: 'CacheFirst',
-                options: {
-                    cacheName: 'offlineCache',
-                    expiration: {
-                    maxEntries: 900
-                    }
                 }
             },
             {
-                urlPattern: /img\/.*/,
-                handler: 'CacheFirst',
+                urlPattern: /\.(?:jpg|jpeg|gif|png|svg|ico|webp)$/i,
+                handler: 'StaleWhileRevalidate',
                 options: {
-                    cacheName: 'offlineCache',
-                    expiration: {
-                    maxEntries: 900
-                    }
+                cacheName: 'static-image-assets',
+                expiration: {
+                    maxEntries: 64,
+                    maxAgeSeconds: 24 * 60 * 60 // 24 hours
+                }
                 }
             },
             {
-                urlPattern: /svg\/.*/,
-                handler: 'CacheFirst',
+                urlPattern: /\.(?:js)$/i,
+                handler: 'StaleWhileRevalidate',
                 options: {
-                    cacheName: 'offlineCache',
-                    expiration: {
-                    maxEntries: 900
-                    }
+                cacheName: 'static-js-assets',
+                expiration: {
+                    maxEntries: 16,
+                    maxAgeSeconds: 24 * 60 * 60 // 24 hours
+                }
                 }
             },
-            /*end media cache local app*/
-            /*start external cache apis */
-            
             {
-                urlPattern: /^https?.*/,
+                urlPattern: /\.(?:css|less)$/i,
+                handler: 'StaleWhileRevalidate',
+                options: {
+                cacheName: 'static-style-assets',
+                expiration: {
+                    maxEntries: 16,
+                    maxAgeSeconds: 24 * 60 * 60 // 24 hours
+                }
+                }
+            },
+            {
+                urlPattern: /\.(?:json|xml|csv)$/i,
+                handler: 'StaleWhileRevalidate',
+                options: {
+                cacheName: 'static-data-assets',
+                expiration: {
+                    maxEntries: 16,
+                    maxAgeSeconds: 24 * 60 * 60 // 24 hours
+                }
+                }
+            },
+            {
+                urlPattern: /.*/i,
+                handler: 'StaleWhileRevalidate',
+                options: {
+                cacheName: 'others',
+                expiration: {
+                    maxEntries: 16,
+                    maxAgeSeconds: 24 * 60 * 60 // 24 hours
+                }
+                }
+            },
+            {
+                urlPattern: /^https?:.*/,
                 handler: 'NetworkFirst',
                 options: {
-                    cacheName: 'offlineCache',
-                    expiration: {
-                    maxEntries: 900
-                    }
+                cacheName: 'all',
+                expiration: {
+                    maxEntries: 4,
+                    maxAgeSeconds: 365 * 24 * 60 * 60 // 365 days
+                }
                 }
             },
         ]
-    }
-}
-module.exports = withOffline(nextConfig)
+      }
+})

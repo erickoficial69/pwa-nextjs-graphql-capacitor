@@ -59,8 +59,8 @@
     {
       "id": "2oty",
       "name": "./node_modules/@ionic/pwa-elements/dist/esm-es5/pwa-camera.entry.js",
-      "file": "static/chunks/16.bb8c2c8ffa77927a8f5e.js",
-      "publicPath": "static/chunks/16.bb8c2c8ffa77927a8f5e.js"
+      "file": "static/chunks/16.5b5e86c48e74afad5949.js",
+      "publicPath": "static/chunks/16.5b5e86c48e74afad5949.js"
     }
   ],
   "./pwa-toast.entry.js": [
