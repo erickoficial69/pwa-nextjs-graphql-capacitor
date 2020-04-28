@@ -9,7 +9,7 @@
     "next": "next start",
     "postinstall": "next build",
     "export": "next export",
-    "start": "cross-env NODE_ENV=production node server.js"
+    "start": "cross-env NODE_ENV=production next start"
   },
   "dependencies": {
     "@capacitor/android": "^1.5.0",
